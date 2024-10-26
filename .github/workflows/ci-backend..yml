@@ -1,4 +1,4 @@
-name: CI Backend
+name: CI Backend (Main)
   
 on:
   push:
@@ -6,7 +6,9 @@ on:
      - 'main'
     paths:
      - 'sgcmapi/**'
-
+  workflow_dispatch:
+  workflow_call:
+    
 jobs:
   build:
     runs-on: ubuntu-latest
